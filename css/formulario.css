@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: #7870B3 #494A4D;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url(../img/header3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+header {
+  border-bottom: 1px solid white;
+}
+
+.cabezera__pagina {
+  display: flex;
+  justify-content:space-between
+}
+
+.items__cabezera-pagina a {
+  color: black;
+  font-family: sans-serif;
+}
+
+main {
+  padding: 100px;
+}
+
+
+
+
+
+.pie__pagina {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items__pie-pagina img{
+  margin-bottom: ;
+}
+
