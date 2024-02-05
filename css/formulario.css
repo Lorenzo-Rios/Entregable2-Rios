@@ -10,7 +10,7 @@
   box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: #7870B3 #494A4D;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -125,6 +125,7 @@ main {
   max-width: 380px;
   position: relative;
   top: -210px;
+  transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 .contenedor__login-register form{
