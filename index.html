@@ -3,10 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa de Vinos | Inicio</title>
-    <link rel="stylesheet" href="">
+    <title>Casa de Vinos ILLana | Inicio </title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <header class="cabezera__pagina">
+        <div class="items__cabezera-pagina">
+            <img src="./img/logo-vino2.jpeg" alt="" class="logo-vino">
+        </div>
+        <div class="items__cabezera-pagina">
+            <nav>
+                <div class="nav">
+                    <ul>
+                        <li>
+                            <a href="./html/formulario.html">Ingresar</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="contenedor">
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">Contino</span>
+                <img src="./img/contino.png" alt="" class="img-item">
+                <span class="precio-item">$30.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button> 
+            </div>
+            <div class="item">
+                <span class="titulo-item">Pulenta</span>
+                <img src="./img/vinonuevo.jpg" alt="" class="img-item">
+                <span class="precio-item">$25.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Bordeaux</span>
+                <img src="./img/vinolindo.jpg" alt="" class="img-item">
+                <span class="precio-item">$35.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Sauvignon Blanco</span>
+                <img src="./img/vinoblanco2.webp" alt="" class="img-item">
+                <span class="precio-item">$24.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Lambrusco</span>
+                <img src="./img/vino5.webp" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Alaja</span>
+                <img src="./img/vino6.jpg" alt="" class="img-item">
+                <span class="precio-item">$62.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Montmayour</span>
+                <img src="./img/vino7.jpg" alt="" class="img-item">
+                <span class="precio-item">$54.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Cavernet Sauvignon</span>
+                <img src="./img/vino8.png" alt="" class="img-item">
+                <span class="precio-item">$32.000</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">Tacama</span>
+                <img src="./img/vinoblanco.webp" alt="" class="img-item">
+                <span class="precio-item">$42.800</span>
+                <button class="boton-item" id="boton-item">Agregar al Carrito</button>
+            </div>
+        </div> 
+        
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+                <!-- 
+                <div class="carrito-item">
+                    <img src="img/boxengasse.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Box Engasse</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$15.000,00</span>
+                    </div>
+                   <span class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </span>
+                </div>
+                <div class="carrito-item">
+                    <img src="img/skinglam.png" width="80px" alt="">
+                    <div class="carrito-item-detalles">
+                        <span class="carrito-item-titulo">Skin Glam</span>
+                        <div class="selector-cantidad">
+                            <i class="fa-solid fa-minus restar-cantidad"></i>
+                            <input type="text" value="3" class="carrito-item-cantidad" disabled>
+                            <i class="fa-solid fa-plus sumar-cantidad"></i>
+                        </div>
+                        <span class="carrito-item-precio">$18.000,00</span>
+                    </div>
+                   <button class="btn-eliminar">
+                        <i class="fa-solid fa-trash"></i>
+                   </button>
+                </div>
+                 -->
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </main>
+    <footer class="pie__pagina">
+        <div class="item__pie-pagina">
+            <a href="https://www.whatsapp.com/"><img src="./img/telefono.png" alt="" class="logo__telefono"></a>
+        </div>
+        <div class="item__pie-pagina">
+            <a href="https://www.instagram.com/lolorioss_/"><img src="./img/ig.png" alt="" class="logo__ig"></a>
+        </div>
+    </footer>
+    <script src="index.js"></script>
 </body>
 </html>
