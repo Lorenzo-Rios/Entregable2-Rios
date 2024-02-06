@@ -21,14 +21,14 @@ function ready(){
     const botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
     for(let i=0;i<botonesSumarCantidad.length; i++){
         let button = botonesSumarCantidad[i];
-        button.addEventListener('click',sumarCantidad);
+        button.addEventListener("click", sumarCantidad);
     }
 
      //Agrego funcionalidad al buton restar cantidad
     const botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
     for(let i=0;i<botonesRestarCantidad.length; i++){
         let button = botonesRestarCantidad[i];
-        button.addEventListener('click',restarCantidad);
+        button.addEventListener("click", restarCantidad);
     }
 
     //Agregamos funcionalidad al boton Agregar al carrito
