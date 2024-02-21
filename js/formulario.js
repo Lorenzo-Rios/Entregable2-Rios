@@ -42,7 +42,7 @@ function login (){
         caja_trasera_register.style.display = "block";
         caja_trasera_login.style.display = "none";
     }
-    
+
 }
 
 
@@ -64,5 +64,6 @@ function register (){
     }
     
 }
+
 
 
