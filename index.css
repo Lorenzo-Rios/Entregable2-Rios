@@ -63,11 +63,11 @@ header {
   grid-gap:30px;
   grid-row-gap: 30px;
   /* width: 60%; */
-  width: 100%;
+  width: 60%;
   transition: .3s;
 }
 .contenedor .contenedor-items .item{
-  max-width: 200px;
+  max-width: 150px;
   margin: auto;
   border: 1px solid #666;
   border-radius: 10px;
@@ -104,6 +104,11 @@ header {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.pie__pagina .item__pie-pagina .logo-telefono{
+
+}
+
 /* seccion carrito */
 .carrito{
   border: 1px solid #666;
@@ -223,24 +228,6 @@ header {
   scale: 1.05;
 }
 
-.pie__pagina {
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo__telefono {
-  width: 50%;
-  position: relative;
-  top: 200px;
-}
-
-.pie__pagina .item__pie-pagina .logo__ig {
-  width: 30%;
-  position: relative;
-  top: 200px;
-  left: 200px;
-}
-
 /* SECCION RESPONSIVE */
 @media screen and (max-width: 850px) {
   .contenedor {
@@ -253,5 +240,3 @@ header {
       width: 100%;
   }
 }
-
-

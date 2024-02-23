@@ -12,23 +12,23 @@ function ready(){
     
     //Agregremos funcionalidad a los botones eliminar del carrito
     const botonesEliminarItem = document.getElementsByClassName('btn-eliminar');
-    for(var i=0;i<botonesEliminarItem.length; i++){
+    for(let i=0;i<botonesEliminarItem.length; i++){
         let button = botonesEliminarItem[i];
-        button.addEventListener('click',eliminarItemCarrito);
+        button.addEventListener('click', eliminarItemCarrito);
     }
 
     //Agrego funcionalidad al boton sumar cantidad
     const botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
     for(let i=0;i<botonesSumarCantidad.length; i++){
         let button = botonesSumarCantidad[i];
-        button.addEventListener("click", sumarCantidad);
+        button.addEventListener('click',sumarCantidad);
     }
 
      //Agrego funcionalidad al buton restar cantidad
     const botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
     for(let i=0;i<botonesRestarCantidad.length; i++){
         let button = botonesRestarCantidad[i];
-        button.addEventListener("click", restarCantidad);
+        button.addEventListener('click',restarCantidad);
     }
 
     //Agregamos funcionalidad al boton Agregar al carrito
@@ -60,7 +60,18 @@ function agregarAlCarritoClicked(event){
     let precio = item.getElementsByClassName('precio-item')[0].innerText;
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
+    
+    const itemCarro = {
+        titulo: titulo,
+        precio: precio,
+        imagen: imagenSrc
+    }
 
+    localStorage.setItem("item-carro", JSON.stringify(itemCarro));
+
+    let local = JSON.parse(localStorage.getItem("item-carro"));
+
+    console.log(local);
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
     hacerVisibleCarrito();
@@ -122,7 +133,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     //Agregamos la funcionalidad sumar cantidad del nuevo item
     const botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
     botonSumarCantidad.addEventListener('click',sumarCantidad);
-
+  
     //Actualizamos total
     actualizarTotalCarrito();
 }
