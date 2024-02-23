@@ -60,18 +60,7 @@ function agregarAlCarritoClicked(event){
     let precio = item.getElementsByClassName('precio-item')[0].innerText;
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
-    
-    const itemCarro = {
-        titulo: titulo,
-        precio: precio,
-        imagen: imagenSrc
-    }
-
-    localStorage.setItem("item-carro", JSON.stringify(itemCarro));
-
-    let local = JSON.parse(localStorage.getItem("item-carro"));
-
-    console.log(local);
+    guardarVino(titulo, precio);
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
     hacerVisibleCarrito();
@@ -133,7 +122,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc){
     //Agregamos la funcionalidad sumar cantidad del nuevo item
     const botonSumarCantidad = item.getElementsByClassName('sumar-cantidad')[0];
     botonSumarCantidad.addEventListener('click',sumarCantidad);
-  
+
     //Actualizamos total
     actualizarTotalCarrito();
 }
@@ -206,3 +195,4 @@ function actualizarTotalCarrito(){
     document.getElementsByClassName('carrito-precio-total')[0].innerText = '$'+total.toLocaleString("es") + ",00";
 
 }
+
