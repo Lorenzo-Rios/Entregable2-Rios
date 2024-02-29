@@ -1,11 +1,9 @@
 const buttonRegisterVino = document.querySelector("#boton-item")
 
+const vinos = []
+
 function guardarVino (titulo, precio, imagenSrc){
-    const objeto = {
-        nombre: titulo,
-        precio: precio,
-        imagen: imagenSrc
-    }
+    const vino = new vino 
 
     localStorage.setItem("compra", JSON.stringify(objeto))
 

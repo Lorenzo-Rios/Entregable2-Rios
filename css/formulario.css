@@ -151,6 +151,8 @@ main {
   left: 200px;
 }
 
+
+
 @media screen and (max-width: 850px){
   main{
     margin-top: 50px;
