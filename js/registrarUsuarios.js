@@ -16,12 +16,16 @@ if (localStorage.getItem('usuarios')){
     }
 }
 
+const formulario = document.getElementById('formulario');
+const inputs = document.querySelectorAll('#formulario input')
+
 const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, 
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
 	password: /^.{4,12}$/,  
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 }
+
 
 const buttonRegister = document.getElementById('button-register');
 
@@ -30,9 +34,7 @@ buttonRegister.addEventListener('click', controlarPassword);
 function controlarPassword () {
     const pass1 = document.getElementById('pass-one').value;
     const pass2 = document.getElementById('pass-two').value;
-    if (pass1 == pass2 ||  pass1.){
-        
-        const formulario = document.getElementById('formulario');
+    if (pass1 == pass2 || pass1 != /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/){
         
         formulario.addEventListener('submit', (e)=>{
           e.preventDefault;
@@ -52,7 +54,7 @@ function controlarPassword () {
             formulario.reset();
         }
     }else{
-        alert('La contraseña debe coincidir!')
+        alert('La contraseña debe coincidir y poseer entre 4 y 12 caracteres!')
     }
 }
 

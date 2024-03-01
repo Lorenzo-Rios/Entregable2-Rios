@@ -60,7 +60,6 @@ function agregarAlCarritoClicked(event){
     let precio = item.getElementsByClassName('precio-item')[0].innerText;
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
-    guardarVino(titulo, precio);
     agregarItemAlCarrito(titulo, precio, imagenSrc);
 
     hacerVisibleCarrito();
