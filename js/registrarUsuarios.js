@@ -34,7 +34,7 @@ buttonRegister.addEventListener('click', controlarPassword);
 function controlarPassword () {
     const pass1 = document.getElementById('pass-one').value;
     const pass2 = document.getElementById('pass-two').value;
-    if (pass1 == pass2 || pass1 != /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/){
+    if (pass1 != pass2){
         
         formulario.addEventListener('submit', (e)=>{
           e.preventDefault;
@@ -42,19 +42,28 @@ function controlarPassword () {
         })
         
         function agregarUsuario () {
-            const nombre = document.getElementById('name-complete').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('pass-one').value;
-        
-            const NuevoUsuario = new usuario (nombre, email, password);
-        
-            usuarios.push(NuevoUsuario);
-            console.log(usuarios);
-            localStorage.setItem('usuarios', JSON.stringify(usuarios));
-            formulario.reset();
+            const contenedor = document.getElementById("div-p");
+            contenedor.classList.add('contenedor-parrafo');
+            const parrafo = document.createElement('div');
+    
+            let contenido = `
+            <p>La contraseñas <strong>NO</strong> coinciden!</p>
+            `
+            parrafo.innerHTML = contenido;
+    
+            contenedor.append(parrafo);
         }
     }else{
-        alert('La contraseña debe coincidir y poseer entre 4 y 12 caracteres!')
+        const nombre = document.getElementById('name-complete').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('pass-one').value;
+        
+        const NuevoUsuario = new usuario (nombre, email, password);
+        
+        usuarios.push(NuevoUsuario);
+        console.log(usuarios);
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        formulario.reset();
     }
 }
 
