@@ -1,11 +1,3 @@
-class vino{
-    contructor(nombreVino, precioVino, imagenVino){
-        this.nombreVino = nombreVino,
-        this.precioVino = precioVino,
-        this.imagenVino = imagenVino
-    }
-}
-
 const vinos = [];
 
 listo();
@@ -21,7 +13,7 @@ function listo (){
 }
 
 function guardarVinos (){
-    localStorage.setItem('vinos', JSON.stringify(vinos));
+    localStorage.setItem('Productos Comprados', JSON.stringify(vinos));
     console.log(vinos);
 }
 
@@ -33,7 +25,11 @@ function agregarAlArray (event){
     let precio = item.getElementsByClassName('precio-item')[0].innerText;
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
         
-    const NuevoVino = new vino (nombre, precio, imagenSrc);
+    const NuevoVino = {
+        nombreVino: nombre,
+        precioVino: precio,
+        imagenVino: imagenSrc
+    }
         
     vinos.push((NuevoVino));
 }

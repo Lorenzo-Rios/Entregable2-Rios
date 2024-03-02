@@ -8,8 +8,8 @@ class usuario {
 
 const usuarios = [];
 
-if (localStorage.getItem('usuarios')){
-    let user = JSON.parse(localStorage.getItem('usuarios'));
+if (localStorage.getItem('Usuario')){
+    let user = JSON.parse(localStorage.getItem('Usuario'));
 
     for (let i = 0; i<usuarios.length; i++){
         usuarios.push(user[i]);
@@ -62,7 +62,7 @@ function controlarPassword () {
         
         usuarios.push(NuevoUsuario);
         console.log(usuarios);
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
+        localStorage.setItem('Usuario', JSON.stringify(usuarios));
         formulario.reset();
     }
 }
