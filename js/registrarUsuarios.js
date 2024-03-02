@@ -34,7 +34,7 @@ buttonRegister.addEventListener('click', controlarPassword);
 function controlarPassword () {
     const pass1 = document.getElementById('pass-one').value;
     const pass2 = document.getElementById('pass-two').value;
-    if (pass1 != pass2){
+    if (pass1 != pass2 && pass1.length != expresiones.password){
         
         formulario.addEventListener('submit', (e)=>{
           e.preventDefault;
