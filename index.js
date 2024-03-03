@@ -1,7 +1,7 @@
 const mercadopago = require ('mercadopago');
 
 mercadopago.configure({
-    access_token: 'PROD_ACCESS_TOKEN'
+    access_token: 'TEST-880b6ef0-f4cd-4028-b418-d967512f8880'
 });
 
 let carritoVisible = false;
@@ -66,10 +66,15 @@ function agregarAlCarritoClicked(event){
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
     agregarItemAlCarrito(titulo, precio, imagenSrc);
-
+    apiMercadoPago(titulo, precio, imagenSrc);
     hacerVisibleCarrito();
 }
 
+apiMercadoPago(titulo, precio, imagenSrc){
+    let preferences = {
+        Titulo: "Mi producto"
+    }
+}
 
 function hacerVisibleCarrito(){
     carritoVisible = true;
