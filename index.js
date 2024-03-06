@@ -48,7 +48,18 @@ function ready(){
 }
 
 function pagarClicked(){
-    alert("Gracias por la compra");
+    let carritoContenedor = document.getElementsByClassName('carrito')[0];
+    let carroitems = carritoContenedor.getElementsByClassName('carrito-item');
+    let total = 0;
+    for(let i=0; i< carroitems.length;i++){
+        let item = carroitems[i];
+        let precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
+        let precio = parseFloat(precioElemento.innerText.replace('$','').replace('.',''));
+        let cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
+        let cantidad = cantidadItem.value;
+        total = total + (precio * cantidad);
+        console.log(total);
+    }
     
     const carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()){
@@ -66,15 +77,9 @@ function agregarAlCarritoClicked(event){
     let imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
     agregarItemAlCarrito(titulo, precio, imagenSrc);
-    apiMercadoPago(titulo, precio, imagenSrc);
     hacerVisibleCarrito();
 }
 
-apiMercadoPago(titulo, precio, imagenSrc){
-    let preferences = {
-        Titulo: "Mi producto"
-    }
-}
 
 function hacerVisibleCarrito(){
     carritoVisible = true;
